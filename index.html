@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Editor</title>
+    <title>ReadMe Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <div class="container">
-        <div class="editor">
-            <textarea id="markdown-input" placeholder="Type your Markdown here..."></textarea>
+        <h1>ReadMe Generator</h1>
+        <div class="input-section">
+            <label for="apiSelection">API Selection:</label>
+            <input type="text" id="apiSelection" placeholder="Enter API name">
+
+            <label for="heading">Desired Heading:</label>
+            <input type="text" id="heading" placeholder="Enter heading text">
+
+            <button onclick="generateReadMe()">Generate</button>
         </div>
-        <div class="preview" id="markdown-preview"></div>
+
+        <div class="markdown-editor">
+            <h2>Markdown Editor</h2>
+            <textarea id="markdownContent" placeholder="Enter your markdown content here"></textarea>
+        </div>
+
+        <div class="live-preview">
+            <h2>Live Preview</h2>
+            <div id="preview"></div>
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

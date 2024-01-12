@@ -1,12 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const markdownInput = document.getElementById('markdown-input');
-    const markdownPreview = document.getElementById('markdown-preview');
+function generateReadMe() {
+    var apiSelection = document.getElementById("apiSelection").value;
+    var heading = document.getElementById("heading").value;
+    var markdownContent = `# ${heading}\n\nThis ReadMe is for the ${apiSelection} API.`;
 
-    markdownInput.addEventListener('input', updatePreview);
+    document.getElementById("markdownContent").value = markdownContent;
+    updateLivePreview(); // Call the function to update live preview
+}
 
-    function updatePreview() {
-        const markdownText = markdownInput.value;
-        const htmlText = marked(markdownText);
-        markdownPreview.innerHTML = htmlText;
-    }
-});
+function updateLivePreview() {
+    var markdownContent = document.getElementById("markdownContent").value;
+    var previewDiv = document.getElementById("preview");
+    previewDiv.innerText = markdownContent;
+}
