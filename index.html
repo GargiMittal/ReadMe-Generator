@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+
     <title>ReadMe Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,11 +14,11 @@
     <div class="container">
         <h1>ReadMe Generator</h1>
         <div class="input-section">
-            <label for="apiSelection">API Selection:</label>
-            <input type="text" id="apiSelection" placeholder="Enter API name">
+            <label for="apiSelection">API Key:</label>
+            <input type="text" id="apiSelection" placeholder="Enter your Replit API">
 
-            <label for="heading">Desired Heading:</label>
-            <input type="text" id="heading" placeholder="Enter heading text">
+            <label for="heading">Prompt:</label>
+            <input type="text" id="heading" placeholder="Enter topic of your MD file">
 
             <button onclick="generateReadMe()">Generate</button>
         </div>
@@ -31,7 +33,6 @@
             <div id="preview"></div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 
