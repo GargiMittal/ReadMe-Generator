@@ -1,4 +1,4 @@
-# Markdown Generator
+# ReadMe Generator
 
 This is a simple AI integrated Markdown generator implemented in Python using the Tkinter library for the graphical user interface and the `tkhtmlview`, `replicate`, and `markdown2` libraries for HTML rendering, text generation, and Markdown conversion, respectively.
 
